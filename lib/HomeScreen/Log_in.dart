@@ -75,7 +75,7 @@ class _LogInState extends State<LogIn> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     NeumorphicButton(
-                      margin: const EdgeInsets.only(top: 12),
+                      margin: const EdgeInsets.only(top: 12, left: 500),
                       onPressed: () {
                         if (formKey.currentState!.validate()) {
                           Navigator.pushReplacement(
