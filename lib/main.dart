@@ -1,6 +1,6 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:siba_cms_2/HomeScreen/Home_Screen.dart';
+import 'package:siba_cms_2/HomeScreen/Log_in.dart';
 import 'package:siba_cms_2/constants.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           splashTransition: SplashTransition.fadeTransition,
           pageTransitionType: PageTransitionType.rightToLeftWithFade,
           backgroundColor: Colors.blueAccent,
-          nextScreen: const HomeScreen(),
+          nextScreen: const LogIn(),
         ));
   }
 }
