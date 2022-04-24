@@ -5,13 +5,14 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("GeeksForGeeks")),
-      body: const Center(
-          child: Text(
-        "Home pagese",
-        textScaleFactor: 2,
-      )),
-    );
+    return const Text("SIBA CMS");
+    // return Scaffold(
+    //   appBar: AppBar(title: const Text("SIBA CMS")),
+    //   body: const Center(
+    //       child: Text(
+    //     "Home pagese",
+    //     textScaleFactor: 2,
+    //   )),
+    // );
   }
 }
