@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           splashTransition: SplashTransition.fadeTransition,
           pageTransitionType: PageTransitionType.rightToLeftWithFade,
           backgroundColor: Colors.blueAccent,
-          nextScreen: Dwa(),
+          nextScreen: LogIn(),
         ));
   }
 }

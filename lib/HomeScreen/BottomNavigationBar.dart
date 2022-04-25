@@ -28,7 +28,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return Scaffold(
         extendBody: true,
         appBar: AppBar(title: const Text("SIBA CMS")),
-        drawer: const Drawer(),
+        drawer: const Drawer(
+          backgroundColor: Colors.redAccent,
+        ),
         bottomNavigationBar: Theme(
           data: Theme.of(context).copyWith(
             iconTheme: const IconThemeData(color: Colors.white),
