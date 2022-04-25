@@ -16,7 +16,7 @@ class Dwa extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'SIBA CMS',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -112,7 +112,7 @@ class CustomDrawer extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
-                  Text("RetroPortal Studio")
+                  Text("Hans Raj")
                 ],
               )),
           ListTile(
@@ -144,7 +144,7 @@ class CustomDrawer extends StatelessWidget {
               debugPrint("Tapped Payments");
             },
             leading: Icon(Icons.payment),
-            title: Text("Payments"),
+            title: Text("Finace"),
           ),
           Divider(
             height: 1,
@@ -156,6 +156,17 @@ class CustomDrawer extends StatelessWidget {
             },
             leading: Icon(Icons.notifications),
             title: Text("Notifications"),
+          ),
+          Divider(
+            height: 1,
+            color: Colors.grey,
+          ),
+          ListTile(
+            onTap: () {
+              debugPrint("Tapped Feedback");
+            },
+            leading: Icon(Icons.exit_to_app),
+            title: Text("Feedback"),
           ),
           Divider(
             height: 1,
