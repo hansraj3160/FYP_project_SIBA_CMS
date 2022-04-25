@@ -2,6 +2,7 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:siba_cms_2/HomeScreen/BottomNavigationBar.dart';
 import 'package:siba_cms_2/HomeScreen/Login.dart';
+import 'package:siba_cms_2/components/DrawerActivity.dart';
 import 'package:siba_cms_2/constants.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
           splashTransition: SplashTransition.fadeTransition,
           pageTransitionType: PageTransitionType.rightToLeftWithFade,
           backgroundColor: Colors.blueAccent,
-          nextScreen: const BottomNavBar(),
+          nextScreen: Dwa(),
         ));
   }
 }
