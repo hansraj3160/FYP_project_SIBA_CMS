@@ -18,7 +18,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int _page = 0;
   final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
   final screens = [
-    const HomeScreen(),
+    HomeScreen(),
     const EventsActivity(),
     const NewsActivity(),
     const NotificationActivity(),
@@ -26,11 +26,11 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        drawer: Drawer(
+          child: DrawerActivity(),
+        ),
         extendBody: true,
         appBar: AppBar(title: const Text("SIBA CMS")),
-        drawer: const Drawer(
-          backgroundColor: Colors.redAccent,
-        ),
         bottomNavigationBar: Theme(
           data: Theme.of(context).copyWith(
             iconTheme: const IconThemeData(color: Colors.white),

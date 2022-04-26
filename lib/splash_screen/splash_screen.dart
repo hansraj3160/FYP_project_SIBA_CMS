@@ -1,6 +1,7 @@
-import 'dart:async';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:siba_cms_2/HomeScreen/Home_Screen.dart';
+import 'package:siba_cms_2/HomeScreen/BottomNavigationBar.dart';
+import 'package:page_transition/page_transition.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -10,22 +11,14 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreen extends State<SplashScreen> {
   @override
-  void initState() {
-    _navigate();
-    super.initState();
-  }
-
-  _navigate() async {
-    await Future.delayed(
-        const Duration(microseconds: 4000),
-        () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const HomeScreen())));
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return Container(
-        color: Colors.white,
-        child: FlutterLogo(size: MediaQuery.of(context).size.height));
+    return AnimatedSplashScreen(
+      splash: Image.asset("assets/images/iba_logo.png"),
+      duration: 1000,
+      splashTransition: SplashTransition.fadeTransition,
+      pageTransitionType: PageTransitionType.rightToLeftWithFade,
+      backgroundColor: Colors.blueAccent,
+      nextScreen: BottomNavBar(),
+    );
   }
 }
