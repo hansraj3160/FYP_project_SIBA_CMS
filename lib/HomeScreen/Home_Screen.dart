@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:siba_cms_2/HomeScreen/Events_Activity.dart';
+import 'package:siba_cms_2/HomeScreen/News.dart';
+import 'package:siba_cms_2/HomeScreen/Notifications.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({Key? key}) : super(key: key);
   final List<String> itemsName = ["Profile", "Course", "Attendance", "Result"];
   final List<String> imagespath = [
-    "assets/images/iba_logo.png",
     "assets/images/profile.jpg",
-    "assets/images/course.png",
-    "assets/images/result.png"
+    "assets/images/courses.jpg",
+    "assets/images/attendance.png",
+    "assets/images/result1.jpg"
   ];
-
+  final screens = [
+    const EventsActivity(),
+    const NewsActivity(),
+    const NotificationActivity(),
+  ];
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
@@ -19,25 +25,27 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.white60,
         body: GridView.count(
             crossAxisCount: 2,
-            children: List.generate(4, (index) {
+            children: List.generate(1, (index) {
               return Card(
-                  elevation: 50,
-                  shadowColor: const Color.fromARGB(255, 197, 194, 194),
-                  child: SizedBox(
-                    width: 100,
-                    height: 100,
-                    child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Column(children: [
-                          Image.asset(imagespath[index],
-                              width: 100, height: 100),
-                          Divider(),
-                          Text(
-                            itemsName[index],
-                            style: Theme.of(context).textTheme.headline5,
-                          ),
-                        ])),
-                  ));
+                elevation: 50,
+                shadowColor: const Color.fromARGB(255, 197, 194, 194),
+                child: Center(
+                    child: SizedBox(
+                  child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Column(children: [
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Image.asset(imagespath[index], width: 100, height: 100),
+                        const Divider(),
+                        Text(
+                          itemsName[index],
+                          style: Theme.of(context).textTheme.headline5,
+                        ),
+                      ])),
+                )),
+              );
             })));
   }
 }

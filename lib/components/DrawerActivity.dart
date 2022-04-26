@@ -13,13 +13,17 @@ class DrawerActivity extends StatelessWidget {
           accountEmail: Text('023-18-0020'),
           currentAccountPicture: CircleAvatar(
             backgroundColor: Colors.black26,
-            child: Text('M'),
+            child: Text('H'),
           ),
           decoration: BoxDecoration(color: Colors.orange),
         ),
         const ListTile(
-          leading: Icon(Icons.copy_all_outlined),
+          leading: Icon(Icons.library_books),
           title: Text('My Course'),
+        ),
+        const ListTile(
+          leading: Icon(Icons.list_outlined),
+          title: Text('Terms'),
         ),
         const ListTile(
           leading: Icon(Icons.calendar_month_outlined),
