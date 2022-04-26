@@ -13,7 +13,7 @@ class DrawerActivity extends StatelessWidget {
           accountEmail: Text('023-18-0020'),
           currentAccountPicture: CircleAvatar(
             backgroundColor: Colors.black26,
-            child: Text('Hans'),
+            child: Text('M'),
           ),
           decoration: BoxDecoration(color: Colors.orange),
         ),

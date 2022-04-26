@@ -31,8 +31,9 @@ class HomeScreen extends StatelessWidget {
                         child: Column(children: [
                           Image.asset(imagespath[index],
                               width: 100, height: 100),
+                          Divider(),
                           Text(
-                            'Text ' + itemsName[index],
+                            itemsName[index],
                             style: Theme.of(context).textTheme.headline5,
                           ),
                         ])),
