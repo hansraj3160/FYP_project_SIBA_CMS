@@ -25,7 +25,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.white60,
         body: GridView.count(
             crossAxisCount: 2,
-            children: List.generate(1, (index) {
+            children: List.generate(4, (index) {
               return Card(
                 elevation: 50,
                 shadowColor: const Color.fromARGB(255, 197, 194, 194),

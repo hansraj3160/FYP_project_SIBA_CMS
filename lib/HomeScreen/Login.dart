@@ -1,5 +1,6 @@
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:siba_cms_2/HomeScreen/BottomNavigationBar.dart';
+import 'package:siba_cms_2/backgroundComp/background.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({Key? key}) : super(key: key);
@@ -19,14 +20,11 @@ class _LogInState extends State<LogIn> {
     return Scaffold(
         resizeToAvoidBottomInset: false,
         key: _scaffoldKey,
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-        ),
         backgroundColor: const Color(0xFFffffff),
-        body: SingleChildScrollView(
-            child: Container(
-          padding: const EdgeInsets.only(left: 40, right: 40),
+        body: Background(
+            child: SingleChildScrollView(
+                child: Container(
+          padding: const EdgeInsets.only(left: 20, right: 20),
           child: Form(
             key: formKey, //key for form
             child: Column(
@@ -93,7 +91,7 @@ class _LogInState extends State<LogIn> {
                                 BorderRadius.circular(100)),
                             depth: 5,
                             lightSource: LightSource.topLeft,
-                            color: const Color.fromARGB(255, 67, 31, 187)),
+                            color: Color.fromARGB(200, 64, 106, 212)),
                         padding: const EdgeInsets.all(12.0),
                         child: const Icon(
                           Icons.arrow_forward,
@@ -106,6 +104,6 @@ class _LogInState extends State<LogIn> {
               ],
             ),
           ),
-        )));
+        ))));
   }
 }

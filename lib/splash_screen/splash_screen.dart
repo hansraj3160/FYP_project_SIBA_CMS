@@ -18,7 +18,8 @@ class _SplashScreen extends State<SplashScreen> {
       duration: 1000,
       splashTransition: SplashTransition.fadeTransition,
       pageTransitionType: PageTransitionType.rightToLeftWithFade,
-      backgroundColor: Colors.blueAccent,
+      // backgroundColor: Colors.blueAccent,
+      backgroundColor: Color.fromARGB(200, 64, 106, 212),
       nextScreen: LogIn(),
     );
   }
