@@ -5,9 +5,9 @@ class EventsActivity extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.orange,
-      body: const Center(
+      body: Center(
           child: Text(
         "event pagese",
         textScaleFactor: 2,

@@ -1,20 +1,20 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:siba_cms_2/HomeScreen/Events_Activity.dart';
-import 'package:siba_cms_2/HomeScreen/Home_Screen.dart';
-import 'package:siba_cms_2/HomeScreen/News.dart';
-import 'package:siba_cms_2/HomeScreen/Notifications.dart';
+import 'package:siba_cms_2/activities/Events_Activity.dart';
+import 'package:siba_cms_2/activities/Home_Screen.dart';
+import 'package:siba_cms_2/activities/News.dart';
+import 'package:siba_cms_2/activities/Notifications.dart';
 import 'package:siba_cms_2/components/DrawerActivity.dart';
 
-class BottomNavBar extends StatefulWidget {
-  const BottomNavBar({Key? key}) : super(key: key);
+class MainScreen extends StatefulWidget {
+  const MainScreen({Key? key}) : super(key: key);
 
   @override
-  _BottomNavBarState createState() => _BottomNavBarState();
+  _MainScreenState createState() => _MainScreenState();
 }
 
-class _BottomNavBarState extends State<BottomNavBar> {
+class _MainScreenState extends State<MainScreen> {
   int _page = 0;
   final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
   final screens = [
@@ -26,7 +26,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: Drawer(
+        drawer: const Drawer(
           child: DrawerActivity(),
         ),
         extendBody: true,

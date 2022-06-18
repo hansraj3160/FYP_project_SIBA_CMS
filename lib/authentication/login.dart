@@ -1,5 +1,5 @@
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import 'package:siba_cms_2/HomeScreen/BottomNavigationBar.dart';
+import 'package:siba_cms_2/HomeScreen/main_screen.dart';
 import 'package:siba_cms_2/backgroundComp/background.dart';
 
 class LogIn extends StatefulWidget {
@@ -73,30 +73,27 @@ class _LogInState extends State<LogIn> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Positioned(
-                      child: NeumorphicButton(
-                        margin: EdgeInsets.only(top: 12, left: width / 2 + 50),
-                        onPressed: () {
-                          if (formKey.currentState!.validate()) {
-                            Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const BottomNavBar()));
-                          }
-                        },
-                        style: NeumorphicStyle(
-                            shape: NeumorphicShape.convex,
-                            boxShape: NeumorphicBoxShape.roundRect(
-                                BorderRadius.circular(100)),
-                            depth: 5,
-                            lightSource: LightSource.topLeft,
-                            color: Color.fromARGB(200, 64, 106, 212)),
-                        padding: const EdgeInsets.all(12.0),
-                        child: const Icon(
-                          Icons.arrow_forward,
-                          color: Colors.white,
-                        ),
+                    NeumorphicButton(
+                      margin: EdgeInsets.only(top: 12, left: width / 2 + 50),
+                      onPressed: () {
+                        if (formKey.currentState!.validate()) {
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const MainScreen()));
+                        }
+                      },
+                      style: NeumorphicStyle(
+                          shape: NeumorphicShape.convex,
+                          boxShape: NeumorphicBoxShape.roundRect(
+                              BorderRadius.circular(100)),
+                          depth: 5,
+                          lightSource: LightSource.topLeft,
+                          color: Color.fromARGB(200, 64, 106, 212)),
+                      padding: const EdgeInsets.all(12.0),
+                      child: const Icon(
+                        Icons.arrow_forward,
+                        color: Colors.white,
                       ),
                     ),
                   ],

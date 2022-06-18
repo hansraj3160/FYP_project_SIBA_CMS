@@ -38,11 +38,9 @@ class DrawerActivity extends StatelessWidget {
           title: Text('Withdraw'),
         ),
         ListTile(
-          leading: Icon(Icons.card_giftcard),
+          leading: const Icon(Icons.card_giftcard),
           title: const Text('Result'),
-          onTap: () {
-            Navigator.pop(context);
-          },
+          onTap: () {},
         ),
         const ListTile(
           leading: Icon(Icons.note),
