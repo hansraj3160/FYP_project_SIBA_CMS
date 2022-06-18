@@ -1,7 +1,6 @@
-// ignore: file_names
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import 'package:flutter/material.dart';
-import 'package:siba_cms_2/HomeScreen/Home_Screen.dart';
+import 'package:siba_cms_2/HomeScreen/main_screen.dart';
+import 'package:siba_cms_2/backgroundComp/background.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({Key? key}) : super(key: key);
@@ -16,18 +15,16 @@ class _LogInState extends State<LogIn> {
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
+    final double width = MediaQuery.of(context).size.width;
     final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
         resizeToAvoidBottomInset: false,
         key: _scaffoldKey,
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-        ),
         backgroundColor: const Color(0xFFffffff),
-        body: SingleChildScrollView(
-            child: Container(
-          padding: const EdgeInsets.only(left: 40, right: 40),
+        body: Background(
+            child: SingleChildScrollView(
+                child: Container(
+          padding: const EdgeInsets.only(left: 20, right: 20),
           child: Form(
             key: formKey, //key for form
             child: Column(
@@ -35,11 +32,11 @@ class _LogInState extends State<LogIn> {
               children: [
                 SizedBox(height: height * 0.04),
                 const Text(
-                  "Here to Get",
+                  "Welcome To",
                   style: TextStyle(fontSize: 30, color: Color(0xFF363f93)),
                 ),
                 const Text(
-                  "Welcomed !",
+                  "SIBA CMS 2.0",
                   style: TextStyle(fontSize: 30, color: Color(0xFF363f93)),
                 ),
                 SizedBox(height: height * 0.04),
@@ -59,6 +56,7 @@ class _LogInState extends State<LogIn> {
                 ),
                 SizedBox(height: height * 0.04),
                 TextFormField(
+                  obscureText: true,
                   decoration: const InputDecoration(
                     labelText: "Enter you Password",
                     border: OutlineInputBorder(),
@@ -76,13 +74,13 @@ class _LogInState extends State<LogIn> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     NeumorphicButton(
-                      margin: const EdgeInsets.only(top: 12, left: 500),
+                      margin: EdgeInsets.only(top: 12, left: width / 2 + 50),
                       onPressed: () {
                         if (formKey.currentState!.validate()) {
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const HomeScreen()));
+                                  builder: (context) => const MainScreen()));
                         }
                       },
                       style: NeumorphicStyle(
@@ -91,7 +89,7 @@ class _LogInState extends State<LogIn> {
                               BorderRadius.circular(100)),
                           depth: 5,
                           lightSource: LightSource.topLeft,
-                          color: const Color.fromARGB(255, 67, 31, 187)),
+                          color: Color.fromARGB(200, 64, 106, 212)),
                       padding: const EdgeInsets.all(12.0),
                       child: const Icon(
                         Icons.arrow_forward,
@@ -103,6 +101,6 @@ class _LogInState extends State<LogIn> {
               ],
             ),
           ),
-        )));
+        ))));
   }
 }
